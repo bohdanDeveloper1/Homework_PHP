@@ -26,3 +26,21 @@ If you want to stop your environment, launch:
 ```bash
 docker-compose down
 ```
+
+# First run
+Start docker containers:
+```bash
+docker-compose up -d
+```
+Run bash in PHP container:
+```bash
+docker-compose exec bash php
+```
+Install composer.phar
+```bash
+curl -s https://getcomposer.org/installer | php
+```
+Install composer dependencies and generate autoloads:
+```bash
+./composer.phar install
+```

@@ -13,5 +13,6 @@ services:
 
   php:
     build: php
+    working_dir: /var/www/localhost
     volumes:
       - ./../src:/var/www/localhost
