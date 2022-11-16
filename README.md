@@ -34,7 +34,7 @@ docker-compose up -d
 ```
 Run bash in PHP container:
 ```bash
-docker-compose exec bash php
+docker-compose exec php bash
 ```
 Install composer.phar
 ```bash
