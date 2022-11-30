@@ -9,4 +9,7 @@ use Apsl\Http\Response;
 $request = new Request();
 
 $response = new Response();
-$response->addHeader(Response::HEADER_CONTENT_TYPE, 'application/json');
+$response->addHeader(Response::HEADER_CONTENT_TYPE, 'text/html');
+$response->setBody('Hello from OOP world!');
+
+$response->send();
