@@ -2,14 +2,8 @@
 
 require_once 'vendor/autoload.php';
 
-use Apsl\Http\Request;
-use Apsl\Http\Response;
+use Apsl\Inf03\Webdev\Application;
 
 
-$request = new Request();
-
-$response = new Response();
-$response->addHeader(Response::HEADER_CONTENT_TYPE, 'text/html');
-$response->setBody('Hello from OOP world!');
-
-$response->send();
+$app = new Application();
+$app->run();
