@@ -8,10 +8,17 @@ class Request
     const HEADER_ACCEPT_LANGUAGE = 'Accept-Language';
     const HEADER_ACCEPT = 'Accept';
     const HEADER_USER_AGENT = 'User-Agent';
+    const METHOD_POST = 'post';
+    const METHOD_GET = 'get';
 
     public function getMethod(): string
     {
-        return $_SERVER['REQUEST_METHOD'];
+        return strtolower($_SERVER['REQUEST_METHOD']);
+    }
+
+    public function isMethod(string $method)
+    {
+        return $this->getMethod() === strtolower($method);
     }
 
     public function isHttps(): bool
