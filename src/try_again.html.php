@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- заголовок сторінки, змінна $title з php  -->
-    <title><?php echo $title ?></title>  
+    <title> Enter u data again </title>  
 </head>
 <body>
 

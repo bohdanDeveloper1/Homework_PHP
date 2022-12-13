@@ -12,21 +12,21 @@ class Application
 {
     public function run(): void
     {
-        $request = new Request();
+        $request = new Request(); //не використовуємо
 
         $response = new Response();
         $response->addHeader(Response::HEADER_CONTENT_TYPE, 'text/html');
 
-        $session = new Session();
+        $session = new Session();//не використовуємо
 
         $template = new Template('templates/index.html.php');
-        $out = $template->render([
+        $out = $template->render([ //встановлюємо напис (заголовок сторінки)
             'title' => 'Hello!'
         ]);
 
         // TODO: hide login form when user is logged in, display log out which will destroy session
 
-        $response->setBody($out);
+        $response->setBody($out); //передаємо  $out = $template->render
 
         $response->send();
     }

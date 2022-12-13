@@ -5,10 +5,10 @@ namespace Apsl\Http;
 
 class Response
 {
-    const HEADER_CONTENT_TYPE = 'Content-Type';
+    const HEADER_CONTENT_TYPE = 'Content-Type'; //викликаємо через self::
     const HEADER_CONTENT_LENGTH = 'Content-Length';
     const HEADER_LOCATION = 'Location';
-    const STATUS_CODE_200_OK = 200;
+     const STATUS_CODE_200_OK = 200;
     const STATUS_CODE_301_MOVED_PERMANENTLY = 301;
     const STATUS_CODE_302_FOUND = 302;
     const STATUS_CODE_403_FORBIDDEN = 403;
@@ -63,7 +63,7 @@ class Response
 
     protected function sendHeaders(): void
     {
-        http_response_code($this->statusCode);
+        http_response_code($this->statusCode);//Получает или устанавливает код ответа HTTP
 
         $contentLength = strlen($this->body);
         $this->addHeader(self::HEADER_CONTENT_LENGTH, $contentLength);
